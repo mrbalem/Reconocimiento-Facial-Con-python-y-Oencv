@@ -11,3 +11,5 @@ Pequeño Script que detecta rostros de una imagen con python y opencv
 #### PIL
 
 SI TIENES TODAS ESTAS LIBRERIAS NO TENDRAS NINGUN PROBLEMA
+
+##### BUSCAME EN FB COMO: @HackerMrvalem 
