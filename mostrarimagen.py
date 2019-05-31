@@ -15,9 +15,9 @@ def read_imagen(path):
 
 # Mostrar imagen
 def mostrarImagen(image):
+    #guarda la imagen con los rostros detectados
     cv2.imwrite('hola.jpg',image)
-    #images = Image.open('hola.jpg')
-    #images.show()
+    #siquieres mostrar la imagen con plt. solo comoenta cv2.imwrite. y activa estas opciones
     #plt.imshow(image)
     #plt.xticks([]), plt.yticks([])
     #plt.show()
@@ -53,15 +53,18 @@ def draw_faces(image, faces=None, plot=True):
     else:
         return image_with_faces
     
- 
+ #llamando a la funcion read_imgenes y le mandamos como parametro la ruta de la imagen
 imagen = read_imagen('images/03.jpg')
+#usamos la uncion get_faces con la varibale imagen para que nos retorne las caras detectadas
 rostros = get_faces(imagen)
+
 #mostramos los rostros detectados
 #print("Faces detected: {}".format(len(rostros)))
+
+#esta funcion nos devuelve los rostros detectados en un rectangulo, le madamos como parametros imagen y rostros
 draw_faces(imagen,rostros)
 
 lbl = Label(win, text="Faces destecte: {}".format(len(rostros))).pack()
-
 
 
 imagess = Image.open('images/03.jpg')
